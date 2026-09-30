@@ -45,10 +45,14 @@ namespace HOSPITAL_MANAGEMENT_SYSTEM.Reposatories.Implementation
                 ?? throw new ArgumentException($"Entity with id {id} not found.");
         }
 
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
+
         public void Update(T entity)
         {
-            _dbSet.Update(entity);
-            _context.SaveChanges();
+            _context.Set<T>().Update(entity);
         }
 
 

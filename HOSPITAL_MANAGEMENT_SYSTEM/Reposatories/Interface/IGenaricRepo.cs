@@ -7,5 +7,6 @@
         public void Update(T entity);
         public void Delete(int id);
         public T GetById(int id);
+        public void Save();
     }
 }
